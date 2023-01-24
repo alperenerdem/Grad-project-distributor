@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'selection.css' %}">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>  
+    <form method="POST" class="post-form" enctype="multipart/form-data">  
+            {% csrf_token %}  
+            {{ form.as_p }}
+            {{ form.non_field_errors }}  
+            <button type="submit" class="button">Gönder</button>  
+    </form>  
+    </body>  

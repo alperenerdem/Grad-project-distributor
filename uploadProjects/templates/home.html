@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'base.css' %}">
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+ 
+    <form method="POST" class="post-form" enctype="multipart/form-data">
+            {% csrf_token %}    
+            <input type="submit" name="student" value="Öğrenci Girişi" 
+            class="button" id="submit-id-update" />
+
+            <input type="submit" name="prof" value="Profesör Girişi" 
+            class="button" id="submit-id-done" /> 
+
+            <input type="submit" name="asistant" value="Asistan Girişi" 
+            class="button" id="submit-id-done" /> 
+
+            <input type="submit" name="degerlendirme" value="Rapor Değerlendirme" 
+            class="button" id="submit-id-done" /> 
+            
+    </form>  
+    </body>  
